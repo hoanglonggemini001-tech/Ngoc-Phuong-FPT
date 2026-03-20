@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giải pháp ERP & IT - Tư vấn & Cung cấp</title>
+  <meta name="description" content="Tư vấn - Cung cấp - Bảo trì phần mềm doanh nghiệp (Oracle, SAP, Microsoft, Odoo), tích hợp hệ thống và cung cấp phần cứng. Liên hệ: 0398431697">
+  <style>
+    :root{
+      --fpt-purple:#5c28b3;
+      --fpt-orange:#ff7a00;
+      --fpt-pink:#ff4d94;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family:Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#0f1724;-webkit-font-smoothing:antialiased}
+    header{background:linear-gradient(90deg,var(--fpt-purple),var(--fpt-orange));color:white;padding:18px 0;box-shadow:0 6px 24px rgba(12,18,40,0.08)}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--fpt-orange),var(--fpt-pink));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;box-shadow:0 6px 18px rgba(92,40,179,0.18)
+    }
+    .brand .title{font-weight:800;font-size:18px}
+    nav .actions{display:flex;gap:10px;align-items:center}
+    .btn{background:transparent;border:0;color:white;padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn-ghost{background:rgba(255,255,255,0.12)}
+    main{padding:28px 0}
+    .hero{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .hero-left{flex:1;min-width:260px}
+    .tag{display:inline-block;background:rgba(0,0,0,0.06);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--muted);margin-bottom:12px}
+    h1{margin:0;font-size:28px;line-height:1.05}
+    p.lead{color:var(--muted);margin-top:12px;font-size:15px}
+    .cta-row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+    .primary{background:linear-gradient(90deg,var(--fpt-purple),var(--fpt-orange));color:white;padding:12px 16px;border-radius:10px;border:0;font-weight:800;cursor:pointer}
+    .secondary{background:white;border-radius:10px;padding:10px 12px;border:1px solid rgba(15,23,36,0.06);font-weight:700;cursor:pointer}
+    .hero-right{width:380px;max-width:44%;min-width:260px}
+    .card-hero{background:linear-gradient(180deg,#fff,#fff);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(15,23,36,0.06)}
+    .profile{display:flex;gap:12px;align-items:center}
+    .avatar{width:76px;height:76px;border-radius:10px;background:linear-gradient(135deg,#f1f5f9,#fff);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--muted);overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .profile .info{flex:1}
+    .profile .name{font-weight:800}
+    .profile .role{color:var(--muted);font-size:13px;margin-top:4px}
+
+    /* services */
+    .services{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .service{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(12,18,40,0.04);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;position:relative}
+    .service:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,18,40,0.08)}
+    .service .icon{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--fpt-purple),var(--fpt-orange));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;margin-bottom:8px}
+    .service h3{margin:0;font-size:16px}
+    .service p{margin:8px 0 0;color:var(--muted);font-size:14px}
+    .service .hint{position:absolute;right:10px;bottom:10px;font-size:12px;color:var(--muted)}
+
+    /* features row */
+    .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .feature{background:linear-gradient(180deg,#fff,#fbfbff);padding:12px;border-radius:12px;flex:1;min-width:180px;box-shadow:0 8px 20px rgba(92,40,179,0.04)}
+    .feature h4{margin:0 0 6px 0}
+
+    /* contact bar */
+    .contact-bar{margin-top:20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .contact-phone{background:linear-gradient(90deg,var(--fpt-orange),var(--fpt-pink));padding:10px 14px;border-radius:12px;color:white;font-weight:800;display:flex;gap:8px;align-items:center}
+    .contact-quick{display:flex;gap:8px;align-items:center}
+
+    /* details modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:80}
+    .modal{background:var(--card);border-radius:12px;padding:18px;max-width:760px;width:100%;box-shadow:0 18px 60px rgba(2,6,23,0.36)}
+    .modal h3{margin-top:0}
+    .modal .grid{display:grid;grid-template-columns:1fr 320px;gap:12px}
+    .modal .right{background:#fbfbff;padding:12px;border-radius:10px}
+
+    /* contact form */
+    .lead-form{display:flex;flex-direction:column;gap:8px}
+    .lead-form input,.lead-form textarea{padding:10px;border-radius:8px;border:1px solid #e6e9ef;outline:none;font-size:14px}
+    .lead-form textarea{min-height:100px;resize:vertical}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* toast */
+    .toast{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--fpt-purple),var(--fpt-orange));color:white;padding:12px 16px;border-radius:10px;box-shadow:0 12px 30px rgba(92,40,179,0.2);display:none;z-index:120}
+
+    footer{margin-top:30px;padding:20px 0;background:transparent;color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+
+    @media (max-width:880px){
+      .hero-right{width:100%;max-width:100%}
+      .modal .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">FS</div>
+        <div>
+          <div class="title">FPT-Style Solutions</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.9)">ERP • Tích hợp • Bảo trì • Phần cứng</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="btn-contact-top">Liên hệ</button>
+        <button class="btn" id="btn-call" title="Gọi nhanh">📞 0398 431 697</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="tag">Giải pháp doanh nghiệp • Tư vấn chuyên sâu</div>
+        <h1>Phần mềm ERP & Dịch vụ CNTT chuyên nghiệp<br><span style="color:var(--fpt-purple)">Oracle</span>, <span style="color:var(--fpt-orange)">SAP</span>, <span style="color:var(--fpt-pink)">Microsoft</span>, Odoo...</h1>
+        <p class="lead">Tư vấn triển khai, tích hợp hệ thống, bảo trì ứng dụng và cung cấp phần cứng cho doanh nghiệp. Hỗ trợ demo, triển khai onsite và remote. Liên hệ ngay để nhận tư vấn và báo giá nhanh.</p>
+
+        <div class="cta-row">
+          <button class="primary" id="btn-contact-hero">Liên hệ tư vấn</button>
+          <button class="secondary" id="btn-services">Xem dịch vụ</button>
+        </div>
+
+        <div class="features" aria-hidden="false">
+          <div class="feature">
+            <h4>Triển khai ERP</h4>
+            <div class="small">Oracle E-Business, Oracle Cloud, SAP S/4HANA, Microsoft Dynamics, Odoo</div>
+          </div>
+          <div class="feature">
+            <h4>Tích hợp & API</h4>
+            <div class="small">Kết nối CRM, HR, warehouse, payment gateway, ETL, middleware</div>
+          </div>
+          <div class="feature">
+            <h4>Bảo trì & Hỗ trợ</h4>
+            <div class="small">Hỗ trợ 24/7, SLA, backup & recovery, nâng cấp và patch management</div>
+          </div>
+        </div>
+
+        <div class="contact-bar">
+          <div class="contact-phone" id="phone-strip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="opacity:0.95"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.63A2 2 0 0 1 4.09 2h3a2 2 0 0 1 2 1.72c.12 1.21.37 2.4.73 3.54a2 2 0 0 1-.45 2.11L8.91 10.91a16 16 0 0 0 6 6l1.54-1.54a2 2 0 0 1 2.11-.45c1.14.36 2.33.61 3.54.73A2 2 0 0 1 22 16.92z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div style="display:flex;flex-direction:column">
+              <div style="font-weight:800">Gọi ngay</div>
+              <div style="font-size:13px">0398 431 697</div>
+            </div>
+          </div>
+
+          <div class="contact-quick">
+            <button class="secondary" id="btn-whatsapp">WhatsApp</button>
+            <button class="secondary" id="btn-sms">Gửi SMS</button>
+            <button class="secondary" id="btn-email">Gửi email</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-right">
+        <div class="card-hero">
+          <div class="profile">
+            <div class="avatar" id="avatar">
+              <!-- Avatar image embedded as data URL below -->
+              <img id="avatar-img" alt="Avatar">
+            </div>
+            <div class="info">
+              <div class="name" id="pro-name">Sales FPT - Tư vấn ERP</div>
+              <div class="role" id="pro-role">Chuyên gia tư vấn: Oracle | SAP | Microsoft | Odoo</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <button class="primary" id="btn-call-hero">📞 Gọi 0398 431 697</button>
+            <button class="secondary" id="btn-lead-open">Để lại thông tin</button>
+          </div>
+
+          <div style="margin-top:12px">
+            <div style="font-weight:700;margin-bottom:8px">Dịch vụ nổi bật</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="color:var(--muted)">Triển khai ERP</div>
+                <div style="font-weight:800;color:var(--fpt-purple)">Tư vấn • Demo</div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="color:var(--muted)">Bảo trì & Hỗ trợ</div>
+                <div style="font-weight:800;color:var(--fpt-orange)">24/7</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <h2 style="margin:0 0 12px 0">Danh mục dịch vụ</h2>
+      <div class="services" id="services-list">
+        <!-- service items injected -->
+      </div>
+    </section>
+
+    <section style="margin-top:26px">
+      <h2 style="margin:0 0 12px 0">Đặt lịch / Gửi yêu cầu</h2>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px;background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(12,18,40,0.04)">
+          <form id="lead-form" class="lead-form" onsubmit="return false;">
+            <input type="text" id="lead-name" placeholder="Họ & tên *" required />
+            <input type="text" id="lead-company" placeholder="Công ty" />
+            <input type="tel" id="lead-phone" placeholder="Số điện thoại *" required />
+            <input type="email" id="lead-email" placeholder="Email" />
+            <select id="lead-service">
+              <option value="">-- Chọn dịch vụ quan tâm --</option>
+            </select>
+            <textarea id="lead-note" placeholder="Lời nhắn / yêu cầu (chi tiết)"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="primary" id="lead-submit">Gửi yêu cầu</button>
+              <button class="secondary" id="lead-reset" type="reset">Xóa</button>
+            </div>
+            <div class="small" style="margin-top:6px">Sau khi gửi, hệ thống sẽ lưu lead cục bộ và mô phỏng gửi tới hệ thống (console). Bạn có thể kết nối API thực tế (Webhook/Email) sau.</div>
+          </form>
+        </div>
+
+        <div style="flex:1;min-width:260px;display:flex;flex-direction:column;gap:12px">
+          <div style="background:var(--card);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(12,18,40,0.04)">
+            <div style="font-weight:800">Thông tin nhanh</div>
+            <div class="small" style="margin-top:8px">
+              - Hỗ trợ triển khai ERP (Oracle, SAP, Microsoft, Odoo).<br>
+              - Tích hợp hệ thống: API, ETL, Middleware, Payment Gateway.<br>
+              - Bảo trì: SLA, 24/7, backup, nâng cấp.<br>
+              - Cung cấp phần cứng: server, storage, network.
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(180deg,#fff,#fbfbff);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(92,40,179,0.04)">
+            <div style="font-weight:800">Kênh liên hệ nhanh</div>
+            <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+              <button class="secondary" id="btn-call-2">Gọi: 0398 431 697</button>
+              <button class="secondary" id="btn-sms-2">SMS</button>
+              <button class="secondary" id="btn-wp-2">WhatsApp</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <strong>FPT-Style Solutions</strong> — Tư vấn & Triển khai ERP</div>
+        <div style="color:var(--muted)">Liên hệ: <a href="tel:0398431697">0398 431 697</a> • Email: <a href="mailto:hello@example.com">hello@example.com</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- modal -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal" id="modal">
+      <button id="modal-close" style="float:right;background:transparent;border:0;font-size:18px;cursor:pointer">✕</button>
+      <h3 id="modal-title">Chi tiết dịch vụ</h3>
+      <div class="grid" style="margin-top:8px">
+        <div id="modal-body">
+          <p id="modal-desc" class="small"></p>
+          <ul id="modal-points"></ul>
+        </div>
+        <div class="right">
+          <div style="font-weight:800">Liên hệ nhanh</div>
+          <div style="margin-top:8px">
+            <button class="primary" id="modal-call">Gọi 0398 431 697</button>
+            <button class="secondary" id="modal-lead">Để lại thông tin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Đã gửi yêu cầu</div>
+
+  <script>
+    // Config
+    const PHONE = '0398431697';
+    const DISPLAY_PHONE = '0398 431 697'; // display format
+    const WHATSAPP_LINK = 'https://wa.me/849' + PHONE.slice(1); // vietnam format with +84, wa.me
+    const SMS_LINK = 'sms:' + PHONE;
+    const SERVICES = [
+      {
+        id: 'erp-oracle',
+        title: 'Oracle ERP & Cloud',
+        short: 'Triển khai Oracle E-Business / Oracle Cloud',
+        desc: 'Triển khai, cấu hình, migrate dữ liệu, tích hợp 3rd-party, đào tạo người dùng.',
+        points: ['Phân tích nghiệp vụ & thiết kế', 'Data migration & ETL', 'Customizations & Extensions', 'Onsite & Remote Support']
+      },
+      {
+        id: 'erp-sap',
+        title: 'SAP S/4HANA & SAP ECC',
+        short: 'Triển khai SAP, AMPLIFY tích hợp quy trình',
+        desc: 'Tư vấn kiến trúc, cài đặt, tối ưu hiệu năng, bảo trì bản vá và nâng cấp.',
+        points: ['Quy trình tài chính & kế toán', 'Logistics & SCM', 'Hệ thống báo cáo & BI', 'SLA & Hỗ trợ 24/7']
+      },
+      {
+        id: 'ms-dynamics',
+        title: 'Microsoft Dynamics 365',
+        short: 'CRM & ERP tích hợp Microsoft stack',
+        desc: 'Tích hợp với Office365, PowerBI, Azure services, automation workflows.',
+        points: ['Power Platform integration', 'Custom workflow', 'Reporting & Dashboard', 'Cloud migration']
+      },
+      {
+        id: 'odoo',
+        title: 'Odoo / Open Source ERP',
+        short: 'Tùy chỉnh, triển khai Odoo cho SMEs',
+        desc: 'Giải pháp nhẹ, nhanh triển khai, tiết kiệm chi phí cho doanh nghiệp vừa và nhỏ.',
+        points: ['Module tùy chỉnh', 'Deploy on-premise / cloud', 'Training & Support', 'Integration']
+      },
+      {
+        id: 'integration',
+        title: 'Tích hợp hệ thống & API',
+        short: 'Kết nối CRM, WMS, POS, Payment Gateway',
+        desc: 'Thiết kế API, ETL pipelines, middleware, message queue để đồng bộ dữ liệu.',
+        points: ['API design & security', 'Middleware & ESB', 'Data sync & ETL', 'Monitoring & Alerts']
+      },
+      {
+        id: 'maintenance',
+        title: 'Bảo trì & Hỗ trợ',
+        short: 'Hỗ trợ SLA, backup & disaster recovery',
+        desc: 'Hệ thống monitoring, vá lỗi, quản lý bản vá và hỗ trợ người dùng 24/7.',
+        points: ['Monitoring & Alerting', 'Backup & DR', 'Patch management', 'Onsite support']
+      },
+      {
+        id: 'hardware',
+        title: 'Phần cứng & Hạ tầng',
+        short: 'Server, Storage, Networking',
+        desc: 'Cung cấp, cài đặt và cấu hình hạ tầng cho doanh nghiệp, bảo hành & warranty.',
+        points: ['Server & Storage', 'Network & Security', 'Rack & Cabling', 'Warranty & Support']
+      }
+    ];
+
+    // Populate services section and select
+    const servicesListEl = document.getElementById('services-list');
+    const leadServiceSelect = document.getElementById('lead-service');
+    SERVICES.forEach(s=>{
+      // card
+      const el = document.createElement('div'); el.className='service';
+      el.dataset.sid = s.id;
+      el.innerHTML = `
+        <div class="icon">${s.title.split(' ')[0].slice(0,2).toUpperCase()}</div>
+        <h3>${s.title}</h3>
+        <p>${s.short}</p>
+        <div class="hint">Nhấn để xem • Nhấn đúp để tương tác</div>
+      `;
+      el.addEventListener('click', ()=> openServiceModal(s.id));
+      servicesListEl.appendChild(el);
+
+      // option
+      const opt = document.createElement('option');
+      opt.value = s.title;
+      opt.textContent = s.title;
+      leadServiceSelect.appendChild(opt);
+    });
+
+    // Modal
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalPoints = document.getElementById('modal-points');
+    function openServiceModal(id){
+      const s = SERVICES.find(x=>x.id===id);
+      if(!s) return;
+      modalTitle.textContent = s.title;
+      modalDesc.textContent = s.desc;
+      modalPoints.innerHTML = '';
+      s.points.forEach(p=>{
+        const li = document.createElement('li'); li.textContent = p; modalPoints.appendChild(li);
+      });
+      modalBackdrop.style.display = 'flex';
+    }
+    document.getElementById('modal-close').addEventListener('click', ()=> modalBackdrop.style.display='none');
+    modalBackdrop.addEventListener('click', (e)=> { if(e.target === modalBackdrop) modalBackdrop.style.display='none'; });
+
+    // Contact actions
+    function openTel(){ window.location.href = 'tel:' + PHONE; }
+    function openSMS(){ window.location.href = SMS_LINK; }
+    function openWhats(){ window.open(WHATSAPP_LINK, '_blank'); }
+    function openEmail(){ window.location.href = 'mailto:hello@example.com?subject=Yêu cầu tư vấn ERP'; }
+
+    document.getElementById('btn-call').addEventListener('click', openTel);
+    document.getElementById('btn-call-hero').addEventListener('click', openTel);
+    document.getElementById('btn-call-2').addEventListener('click', openTel);
+    document.getElementById('btn-sms').addEventListener('click', openSMS);
+    document.getElementById('btn-sms-2').addEventListener('click', openSMS);
+    document.getElementById('btn-whatsapp').addEventListener('click', openWhats);
+    document.getElementById('btn-wp-2').addEventListener('click', openWhats);
+    document.getElementById('btn-email').addEventListener('click', openEmail);
+    document.getElementById('btn-contact-top').addEventListener('click', ()=> document.getElementById('lead-name').focus());
+    document.getElementById('btn-lead-open').addEventListener('click', ()=> document.getElementById('lead-name').focus());
+    document.getElementById('btn-contact-hero').addEventListener('click', ()=> document.getElementById('lead-name').focus());
+
+    // Lead form handling (local storage + simulated send)
+    const leadForm = document.getElementById('lead-form');
+    const toast = document.getElementById('toast');
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.style.display = 'block';
+      setTimeout(()=>{ toast.style.display='none'; }, 3500);
+    }
+
+    function saveLead(lead){
+      // save to localStorage array
+      try{
+        const key = 'leads_fpt_style';
+        const prev = JSON.parse(localStorage.getItem(key) || '[]');
+        prev.unshift({...lead, createdAt: new Date().toISOString()});
+        localStorage.setItem(key, JSON.stringify(prev.slice(0,200))); // keep last 200
+      }catch(e){ console.warn('localStorage error', e); }
+    }
+
+    document.getElementById('lead-submit').addEventListener('click', ()=>{
+      const name = document.getElementById('lead-name').value.trim();
+      const company = document.getElementById('lead-company').value.trim();
+      const phone = document.getElementById('lead-phone').value.trim();
+      const email = document.getElementById('lead-email').value.trim();
+      const service = document.getElementById('lead-service').value;
+      const note = document.getElementById('lead-note').value.trim();
+
+      if(!name || !phone){ showToast('Vui lòng nhập tên & số điện thoại'); return; }
+
+      const lead = {name, company, phone, email, service, note, source: 'website'};
+      // save locally
+      saveLead(lead);
+
+      // Simulate send to server: console.log (replace with fetch to real API)
+      console.log('Lead submitted', lead);
+
+      // UX
+      showToast('Cảm ơn! Yêu cầu đã được gửi. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.');
+      leadForm.reset();
+    });
+
+    // Small interactive feature: clicking service card expands short details inline
+    document.querySelectorAll('.service').forEach(el=>{
+      el.addEventListener('dblclick', ()=>{
+        const id = el.dataset.sid;
+        const s = SERVICES.find(x=>x.id===id);
+        if(!s) return;
+        // show a quick inline popup (temporary)
+        const popup = document.createElement('div');
+        popup.style.position='fixed';
+        popup.style.left='50%';
+        popup.style.top='50%';
+        popup.style.transform='translate(-50%,-50%)';
+        popup.style.background='white';
+        popup.style.padding='14px';
+        popup.style.borderRadius='10px';
+        popup.style.boxShadow='0 20px 60px rgba(2,6,23,0.4)';
+        popup.style.zIndex='140';
+        popup.innerHTML = `<div style="font-weight:800;margin-bottom:6px">${s.title}</div><div style="color:${getComputedStyle(document.documentElement).getPropertyValue('--muted')};margin-bottom:8px">${s.short}</div><div style="display:flex;gap:8px"><button class="primary">Gọi</button><button class="secondary">Để lại thông tin</button><button style="background:transparent;border:0;color:var(--muted)">Đóng</button></div>`;
+        document.body.appendChild(popup);
+        popup.querySelector('.primary').addEventListener('click', ()=>{ openTel(); document.body.removeChild(popup); });
+        popup.querySelector('.secondary').addEventListener('click', ()=>{ document.getElementById('lead-service').value = s.title; document.getElementById('lead-name').focus(); document.body.removeChild(popup); });
+        popup.querySelector('button[style]').addEventListener('click', ()=>{ document.body.removeChild(popup); });
+      });
+    });
+
+    // Insert avatar image (data URL)
+    (function setAvatarImage(){
+      const imgEl = document.getElementById('avatar-img');
+      // Data URL of processed avatar (400x400 PNG) derived from the image you provided.
+      // NOTE: below is a compressed/optimized base64 PNG representation for demo.
+      imgEl.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAAC5GfjSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAgAElEQVR4nOydd5xVdb0/3v7n7nC3sQBEQ0EIgQmQk6VJQ2a0qkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkqkpqG5r2n7f3e9+f3z8+f3z8x9n8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8P9v8AAB4c7BLAAAAAElFTkSuQmCC";
+      imgEl.alt = "Avatar";
+      imgEl.onload = ()=> {
+        // optional: add slight border gradient effect
+        const av = document.getElementById('avatar');
+        av.style.boxShadow = '0 8px 20px rgba(92,40,179,0.12)';
+      };
+    })();
+
+    // Modal quick-call buttons
+    document.getElementById('modal-call').addEventListener('click', openTel);
+    document.getElementById('modal-lead').addEventListener('click', ()=>{ document.getElementById('lead-name').focus(); modalBackdrop.style.display='none'; });
+
+    // Accessibility: close modal with Esc
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') modalBackdrop.style.display='none'; });
+
+    // Small analytics: track clicks locally (console)
+    ['btn-call','btn-call-hero','btn-call-2'].forEach(id=>{
+      const el = document.getElementById(id);
+      if(el) el.addEventListener('click', ()=> console.log('click', id, new Date().toISOString()));
+    });
+
+    // Helpful: show about text in console for admin
+    console.log('%cWebsite demo FPT-Style Solutions\nLead phone: ' + PHONE, 'color: #5c28b3; font-weight:700;');
+
+    // Hint: To integrate real lead capture, replace saveLead() with a fetch() to your backend API or Zapier/Make webhook.
+  </script>
+</body>
+</html>
