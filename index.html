@@ -3,120 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trung Nguyên Legend - Hệ Thống Bán Hàng Pro</title>
+    <title>FPT IS ES HCM | Giải Pháp ERP Chuyên Sâu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #1a1a1a; color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .tn-gold { color: #c5a059; }
-        .bg-tn-gold { background-color: #c5a059; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(197, 160, 89, 0.2); }
-        .zalo-btn { position: fixed; bottom: 20px; right: 20px; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+        .bg-fpt-gradient { background: linear-gradient(135deg, #6d28d9 0%, #f97316 100%); }
+        .text-fpt-orange { color: #f97316; }
+        .service-card:hover { border-color: #f97316; transform: translateY(-10px); }
+        html { scroll-behavior: smooth; }
+        .hero-mask { mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
     </style>
 </head>
-<body class="pb-20">
+<body class="bg-white font-sans text-slate-900 overflow-x-hidden">
 
-    <nav class="bg-black border-b border-gray-800 sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold tn-gold tracking-widest">TRUNG NGUYÊN <span class="text-white">SALES</span></h1>
-        <div class="relative cursor-pointer" onclick="toggleCart()">
-            <i class="fas fa-shopping-cart text-2xl tn-gold"></i>
-            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
+    <nav class="bg-fpt-gradient text-white py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-[100] shadow-2xl">
+        <div class="flex items-center space-x-3">
+            <div class="bg-white text-orange-600 font-black rounded-xl px-4 py-1 text-2xl">FS</div>
+            <div>
+                <h1 class="font-bold text-xl tracking-tight leading-none">FPT-Style Solutions</h1>
+                <p class="text-[10px] uppercase font-bold opacity-80">Digital Transformation Expert</p>
+            </div>
+        </div>
+        <div class="hidden lg:flex space-x-8 text-sm font-bold uppercase tracking-wider">
+            <a href="#ve-fpt" class="hover:text-orange-200">Về FPT</a>
+            <a href="#dich-vu" class="hover:text-orange-200">Dịch vụ</a>
+            <a href="#quy-trinh" class="hover:text-orange-200">Quy trình</a>
+            <a href="#lien-he" class="bg-white text-orange-600 px-6 py-2 rounded-full hover:bg-orange-100 transition">0398 431 697</a>
         </div>
     </nav>
 
-    <header class="py-16 text-center bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]">
-        <h2 class="text-4xl font-extrabold mb-4 uppercase tracking-tighter text-white">Năng Lượng Tỉnh Thức</h2>
-        <p class="tn-gold text-lg">Hệ thống phân phối cà phê cao cấp dành cho dân sành</p>
+    <header id="ve-fpt" class="pt-20 pb-32 px-6 md:px-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+            <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-xs font-black uppercase">
+                <i class="fas fa-rocket"></i> <span>Phù Đổng Vươn Mình 2026</span>
+            </div>
+            <h2 class="text-6xl font-black leading-[1.1] text-slate-900">
+                Chuyển đổi số cùng <br>
+                <span class="text-orange-500">FPT IS ES HCM</span>
+            </h2>
+            <p class="text-slate-500 text-xl leading-relaxed italic">
+                "Chúng tôi mang sứ mệnh số hóa doanh nghiệp Việt bằng những nền tảng quản trị hàng đầu thế giới như Oracle, SAP và Odoo."
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="tel:0398431697" class="bg-orange-500 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:bg-orange-600 transition-all transform hover:-translate-y-1">LIÊN HỆ BÁO GIÁ</a>
+                <a href="#dich-vu" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-50 transition-all">XEM GIẢI PHÁP</a>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="bg-slate-100 rounded-[4rem] overflow-hidden border-[12px] border-white shadow-2xl">
+                <img src="image_8e055d.jpg" onerror="this.src='image_8e055d.JPG'" class="w-full h-[650px] object-cover hover:scale-105 transition duration-700" alt="Chuyên gia tư vấn">
+            </div>
+            <div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl border border-slate-50 max-w-xs">
+                <p class="text-purple-700 font-black text-3xl mb-1">30+ Năm</p>
+                <p class="text-slate-500 font-bold text-sm uppercase">Kinh nghiệm triển khai ERP tại Việt Nam</p>
+            </div>
+        </div>
     </header>
 
-    <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-8" id="product-list">
-        </main>
-
-    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl transform translate-x-full transition-transform duration-300 z-[60] p-6 border-l border-gray-700">
-        <div class="flex justify-between items-center mb-6">
-            <h3 class="text-xl font-bold tn-gold">Giỏ Hàng Của Bạn</h3>
-            <button onclick="toggleCart()" class="text-gray-400 hover:text-white"><i class="fas fa-times"></i></button>
-        </div>
-        <div id="cart-items" class="space-y-4 h-[70%] overflow-y-auto">
+    <section class="bg-slate-900 py-24 text-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="text-center space-y-4">
+                <i class="fas fa-award text-5xl text-orange-500"></i>
+                <h4 class="text-xl font-black">Đối tác Chiến lược</h4>
+                <p class="text-slate-400 text-sm">Đối tác cấp cao nhất của SAP & Oracle tại khu vực Đông Nam Á.</p>
             </div>
-        <div class="border-t border-gray-700 mt-6 pt-4">
-            <p class="text-lg flex justify-between">Tổng: <span id="cart-total" class="font-bold tn-gold">0đ</span></p>
-            <button class="w-full bg-tn-gold text-black font-bold py-3 mt-4 rounded hover:bg-yellow-600 transition" onclick="checkout()">THANH TOÁN NGAY</button>
+            <div class="text-center space-y-4">
+                <i class="fas fa-users-cog text-5xl text-purple-500"></i>
+                <h4 class="text-xl font-black">Đội ngũ Chuyên gia</h4>
+                <p class="text-slate-400 text-sm">Hơn 500+ chuyên gia tư vấn nghiệp vụ (Functional) & kỹ thuật (Technical).</p>
+            </div>
+            <div class="text-center space-y-4">
+                <i class="fas fa-shield-alt text-5xl text-blue-500"></i>
+                <h4 class="text-xl font-black">Bảo mật Tuyệt đối</h4>
+                <p class="text-slate-400 text-sm">Hệ thống đạt tiêu chuẩn quốc tế về an toàn thông tin dữ liệu doanh nghiệp.</p>
+            </div>
         </div>
+    </section>
+
+    <section id="dich-vu" class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h3 class="text-4xl font-black text-slate-900 mb-6 uppercase">Giải Pháp ERP Chuyên Sâu</h3>
+            <p class="text-slate-500 text-lg">Vợ tôi - Chuyên gia tư vấn cấp cao sẽ đồng hành cùng bạn lựa chọn giải pháp phù hợp nhất với mô hình kinh doanh.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="bg-purple-100 text-purple-700 p-4 rounded-2xl text-2xl font-black italic">OR</div>
+                    <h5 class="text-2xl font-black">Oracle ERP Cloud</h5>
+                </div>
+                <ul class="space-y-4 text-slate-600 mb-8 font-medium">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Quản trị Tài chính (Finance)</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Quản lý Chuỗi cung ứng (SCM)</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Quản trị Nguồn nhân lực (HCM)</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Báo cáo quản trị thông minh (BI)</li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl bg-slate-900 text-white font-bold hover:bg-purple-700 transition">NHẬN DEMO CHI TIẾT</button>
+            </div>
+
+            <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="bg-orange-100 text-orange-600 p-4 rounded-2xl text-2xl font-black italic">SA</div>
+                    <h5 class="text-2xl font-black">SAP S/4HANA</h5>
+                </div>
+                <ul class="space-y-4 text-slate-600 mb-8 font-medium">
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Số hóa quy trình Sản xuất (Manufacturing)</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Kiểm soát Mua hàng & Kho vận</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Quản lý Dự án phức tạp (PS)</li>
+                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Tích hợp đa kênh bán hàng</li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl bg-orange-500 text-white font-bold hover:bg-orange-600 transition">NHẬN TƯ VẤN LỘ TRÌNH</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="quy-trinh" class="bg-slate-50 py-24 px-6 md:px-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-black mb-16 uppercase">Quy Trình Triển Khai Chuẩn FPT</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="relative p-6">
+                    <div class="text-6xl font-black text-slate-200 absolute -top-4 left-1/2 -translate-x-1/2">01</div>
+                    <h6 class="font-black text-xl mb-4 relative z-10">Khảo Sát</h6>
+                    <p class="text-sm text-slate-500">Đánh giá hiện trạng và bài toán nghiệp vụ thực tế của doanh nghiệp.</p>
+                </div>
+                <div class="relative p-6">
+                    <div class="text-6xl font-black text-slate-200 absolute -top-4 left-1/2 -translate-x-1/2">02</div>
+                    <h6 class="font-black text-xl mb-4 relative z-10">Giải Pháp</h6>
+                    <p class="text-sm text-slate-500">Thiết kế mô hình quy trình "To-be" tối ưu nhất trên nền tảng ERP.</p>
+                </div>
+                <div class="relative p-6">
+                    <div class="text-6xl font-black text-slate-200 absolute -top-4 left-1/2 -translate-x-1/2">03</div>
+                    <h6 class="font-black text-xl mb-4 relative z-10">Đào Tạo</h6>
+                    <p class="text-sm text-slate-500">Chuyển giao tri thức cho người dùng cuối và kiểm thử hệ thống (UAT).</p>
+                </div>
+                <div class="relative p-6">
+                    <div class="text-6xl font-black text-slate-200 absolute -top-4 left-1/2 -translate-x-1/2">04</div>
+                    <h6 class="font-black text-xl mb-4 relative z-10">Go-Live</h6>
+                    <p class="text-sm text-slate-500">Vận hành chính thức và hỗ trợ kỹ thuật sau triển khai 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-20 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+            <img src="image_8e0563.jpg" onerror="this.src='image_8e0563.JPG'" class="rounded-[3rem] shadow-2xl border-4 border-slate-100" alt="Team FPT">
+        </div>
+        <div class="lg:w-1/2 space-y-6">
+            <h3 class="text-4xl font-black text-slate-900 uppercase">Đội Ngũ FIS ES HCM</h3>
+            <p class="text-lg text-slate-600 italic">"Chúng tôi không chỉ bán phần mềm, chúng tôi bán sự tin cậy và hiệu quả."</p>
+            <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-orange-500 text-white p-2 rounded-lg"><i class="fas fa-check"></i></div>
+                    <p class="font-bold text-slate-700">Triển khai onsite tận nơi tại TP.HCM và các tỉnh lân cận.</p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-orange-500 text-white p-2 rounded-lg"><i class="fas fa-check"></i></div>
+                    <p class="font-bold text-slate-700">Hỗ trợ bảo trì định kỳ sau 6-12 tháng vận hành.</p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-orange-500 text-white p-2 rounded-lg"><i class="fas fa-check"></i></div>
+                    <p class="font-bold text-slate-700">Tư vấn tích hợp API với các hệ thống hiện hữu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lien-he" class="fixed bottom-8 right-8 flex flex-col space-y-4 z-[200]">
+        <a href="https://zalo.me/0398431697" target="_blank" class="bg-blue-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all flex items-center justify-center">
+            <i class="fab fa-facebook-messenger text-3xl"></i>
+        </a>
+        <a href="tel:0398431697" class="bg-orange-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all flex items-center justify-center animate-bounce">
+            <i class="fas fa-phone-alt text-3xl"></i>
+        </a>
     </div>
 
-    <a href="https://zalo.me/0398431697" target="_blank" class="zalo-btn bg-blue-600 p-4 rounded-full shadow-lg flex items-center justify-center text-white text-2xl">
-        <i class="fab fa-facebook-messenger"></i>
-    </a>
+    <footer class="bg-slate-900 py-16 text-center text-white">
+        <div class="mb-8">
+            <h2 class="text-2xl font-black text-orange-500">FPT IS ES HCM</h2>
+            <p class="text-slate-500">Vươn Mình Như Phù Đổng - Số Hóa Doanh Nghiệp Việt</p>
+        </div>
+        <div class="text-slate-600 text-xs font-bold uppercase tracking-widest">
+            © 2026 Designed for Ngoc-Phuong-FPT. Bản quyền hình ảnh thuộc về gia đình sếp!
+        </div>
+    </footer>
 
-    <script>
-        const products = [
-            { id: 1, name: "Cà Phê G7 3in1", price: 65000, img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=200&auto=format&fit=crop" },
-            { id: 2, name: "Trung Nguyên Legend Capsule", price: 150000, img: "https://images.unsplash.com/photo-1580915411954-282cb1b0d780?q=80&w=200&auto=format&fit=crop" },
-            { id: 3, name: "Cà Phê Sáng Tạo 8", price: 450000, img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=200&auto=format&fit=crop" }
-        ];
-
-        let cart = JSON.parse(localStorage.getItem('tn_cart')) || [];
-
-        function renderProducts() {
-            const list = document.getElementById('product-list');
-            list.innerHTML = products.map(p => `
-                <div class="product-card bg-zinc-800 rounded-xl overflow-hidden transition-all duration-300 border border-gray-700 p-4">
-                    <img src="${p.img}" class="w-full h-48 object-cover rounded-lg mb-4" alt="${p.name}">
-                    <h3 class="text-lg font-bold mb-2">${p.name}</h3>
-                    <p class="tn-gold font-bold mb-4">${p.price.toLocaleString()} VNĐ</p>
-                    <button onclick="addToCart(${p.id})" class="w-full border border-tn-gold tn-gold py-2 rounded hover:bg-tn-gold hover:text-black transition duration-300">
-                        <i class="fas fa-plus mr-2"></i>Thêm vào giỏ
-                    </button>
-                </div>
-            `).join('');
-        }
-
-        function addToCart(id) {
-            const p = products.find(x => x.id === id);
-            cart.push(p);
-            updateCart();
-        }
-
-        function updateCart() {
-            localStorage.setItem('tn_cart', JSON.stringify(cart));
-            document.getElementById('cart-count').innerText = cart.length;
-            const itemsDiv = document.getElementById('cart-items');
-            itemsDiv.innerHTML = cart.map((item, index) => `
-                <div class="flex justify-between items-center bg-black p-2 rounded">
-                    <div>
-                        <p class="text-sm font-bold">${item.name}</p>
-                        <p class="text-xs tn-gold">${item.price.toLocaleString()}đ</p>
-                    </div>
-                    <button onclick="removeItem(${index})" class="text-red-500 text-xs"><i class="fas fa-trash"></i></button>
-                </div>
-            `).join('');
-            
-            const total = cart.reduce((sum, item) => sum + item.price, 0);
-            document.getElementById('cart-total').innerText = total.toLocaleString() + 'đ';
-        }
-
-        function removeItem(index) {
-            cart.splice(index, 1);
-            updateCart();
-        }
-
-        function toggleCart() {
-            const sidebar = document.getElementById('cart-sidebar');
-            sidebar.classList.toggle('translate-x-full');
-        }
-
-        function checkout() {
-            if(cart.length === 0) return alert("Giỏ hàng trống!");
-            alert("Đã gửi đơn hàng cho hệ thống Kiểm soát nội bộ!");
-            cart = [];
-            updateCart();
-            toggleCart();
-        }
-
-        renderProducts();
-        updateCart();
-    </script>
 </body>
 </html>
