@@ -3,65 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPT IS ES HCM | Chuyên Gia ERP</title>
+    <title>FPT IS | Hệ Sinh Thái Giải Pháp Chuyển Đổi Số</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .bg-fpt-gradient { background: linear-gradient(135deg, #6d28d9 0%, #f97316 100%); }
-        .hero-img { width: 100%; height: 650px; object-fit: cover; border-radius: 3rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); transition: 0.5s; }
-        .hero-img:hover { transform: scale(1.02); }
+        .hero-img { width: 100%; height: 600px; object-fit: cover; border-radius: 3rem; border: 8px solid white; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); }
         html { scroll-behavior: smooth; }
+        .stat-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
     </style>
 </head>
 <body class="bg-white font-sans text-slate-900">
 
-    <nav class="bg-fpt-gradient text-white py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-[100]">
+    <nav class="bg-fpt-gradient text-white py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-[100] shadow-xl">
         <div class="flex items-center space-x-3">
-            <div class="bg-white text-orange-600 font-black rounded-lg px-3 py-1 text-2xl shadow-lg">FS</div>
-            <h1 class="font-bold text-xl uppercase tracking-tighter">FPT-Style Solutions</h1>
+            <div class="bg-white text-orange-600 font-black rounded-lg px-4 py-1 text-2xl">FIS</div>
+            <h1 class="font-bold text-xl uppercase tracking-tighter">FPT IS ES HCM</h1>
         </div>
-        <div class="hidden lg:flex items-center space-x-8 font-bold text-sm">
-            <a href="#dich-vu" class="hover:text-orange-200 uppercase">Giải pháp</a>
-            <div class="bg-white/20 px-5 py-2 rounded-full border border-white/30 tracking-widest">
-                <i class="fas fa-phone-alt mr-2"></i> 0398 431 697
-            </div>
+        <div class="hidden lg:flex items-center space-x-8 font-bold text-sm uppercase">
+            <a href="#nang-luc" class="hover:text-orange-200">Năng lực</a>
+            <a href="#giai-phap" class="hover:text-orange-200">Giải pháp</a>
+            <a href="tel:0398431697" class="bg-white text-orange-600 px-6 py-2 rounded-full shadow-lg">Liên hệ ngay</a>
         </div>
     </nav>
 
-    <section class="pt-16 pb-24 px-6 md:px-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section class="py-16 px-6 md:px-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="space-y-8">
-            <span class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-xs font-black uppercase">Phù Đổng Vươn Mình 2026</span>
-            <h2 class="text-6xl font-black leading-tight">Chuyển đổi số cùng <br><span class="text-orange-500">FPT IS ES HCM</span></h2>
-            <p class="text-slate-500 text-xl leading-relaxed italic">"Cung cấp giải pháp Oracle, SAP, Microsoft chuyên sâu cho doanh nghiệp."</p>
+            <span class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest italic">Co-create the Next</span>
+            <h2 class="text-6xl font-black leading-tight">Chuyên Gia <br><span class="text-orange-500">ERP & Digital</span></h2>
+            <p class="text-slate-600 text-xl leading-relaxed">
+                FPT IS là đối tác công nghệ tin cậy, sở hữu đội ngũ chuyên gia hàng đầu và kinh nghiệm triển khai hàng nghìn dự án ERP/SAP cho các tập đoàn lớn.
+            </p>
             <div class="flex flex-wrap gap-4">
-                <a href="tel:0398431697" class="bg-orange-500 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:bg-orange-600 transition tracking-tighter">GỌI TƯ VẤN NGAY</a>
-                <a href="#dich-vu" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-50 transition">XEM DỊCH VỤ</a>
+                <a href="tel:0398431697" class="bg-orange-500 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:bg-orange-600 transition tracking-tighter">TƯ VẤN TRIỂN KHAI</a>
+                <a href="#giai-phap" class="bg-white border-2 border-slate-200 text-slate-700 px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-50 transition">XEM NĂNG LỰC</a>
             </div>
         </div>
+
         <div class="relative">
-            <img src="image_8e055d.jpg.png" onerror="this.src='image_8e055d.jpg'" class="hero-img" alt="Ngoc Phuong FPT">
-            <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-2xl border border-slate-100">
-                <p class="text-purple-700 font-black text-2xl uppercase italic">Phù Đổng Vươn Mình</p>
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">TP. HCM, 30/01/2026</p>
+            <img src="image_8e055d.jpg.png" 
+                 onerror="this.src='https://raw.githubusercontent.com/hoanglonggemini001-tech/Ngoc-Phuong-FPT/main/image_8e055d.jpg.png'" 
+                 class="hero-img" alt="FIS Representative">
+            
+            <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-2xl border border-slate-50">
+                <p class="text-purple-700 font-black text-2xl uppercase italic leading-none italic">"Phù Đổng Vươn Mình"</p>
+                <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2 tracking-widest">Đội ngũ FIS HCM - 2026</p>
             </div>
         </div>
     </section>
 
-    <section id="dich-vu" class="bg-slate-50 py-24 px-6 md:px-20">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-16 items-center mb-24">
-                <div class="lg:w-1/2">
-                    <img src="image_8e0563.jpg.png" onerror="this.src='image_8e0563.jpg'" class="rounded-[3rem] shadow-2xl border-4 border-white" alt="Team FPT">
+    <section id="nang-luc" class="bg-slate-900 py-24 text-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-20">
+            <h3 class="text-3xl font-black mb-16 text-center uppercase">Vị Thế Dẫn Đầu Của FPT IS</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stat-card p-10 rounded-3xl text-center">
+                    <p class="text-5xl font-black text-orange-500 mb-2">3.200+</p>
+                    <p class="text-sm font-bold uppercase text-slate-400">Chuyên gia công nghệ</p>
                 </div>
-                <div class="lg:w-1/2 space-y-6">
-                    <h3 class="text-4xl font-black uppercase tracking-tighter text-slate-900">Đội Ngũ FIS ES HCM</h3>
-                    <p class="text-lg text-slate-600 font-medium italic">"Đồng hành cùng doanh nghiệp Việt vươn tầm quốc tế."</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-orange-500"></i><span class="font-bold">Tư vấn Oracle ERP Cloud & SAP S/4HANA</span></li>
-                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-orange-500"></i><span class="font-bold">Triển khai Odoo linh hoạt cho SME</span></li>
-                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-orange-500"></i><span class="font-bold">Hỗ trợ kỹ thuật 24/7 onsite & remote</span></li>
+                <div class="stat-card p-10 rounded-3xl text-center">
+                    <p class="text-5xl font-black text-purple-500 mb-2">30+</p>
+                    <p class="text-sm font-bold uppercase text-slate-400">Năm kinh nghiệm triển khai</p>
+                </div>
+                <div class="stat-card p-10 rounded-3xl text-center">
+                    <p class="text-5xl font-black text-blue-500 mb-2">60.000+</p>
+                    <p class="text-sm font-bold uppercase text-slate-400">Dự án hoàn thành</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="giai-phap" class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <h3 class="text-4xl font-black mb-16 text-slate-900 uppercase flex items-center">
+            <span class="w-12 h-1 bg-orange-500 mr-4"></span> Hệ sinh thái dịch vụ
+        </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-lg hover:border-orange-500 transition">
+                    <h4 class="text-xl font-black text-orange-600 mb-4 tracking-widest uppercase">1. ERP & Management Solutions</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Tư vấn và triển khai hệ thống quản trị doanh nghiệp chuyên sâu với SAP (S/4HANA, B1), Oracle Cloud, Microsoft Dynamics 365.
+                    </p>
+                    <ul class="text-xs font-bold text-slate-500 space-y-2 italic">
+                        <li>- Top 1 Đối tác SAP tại Việt Nam</li>
+                        <li>- Chuyên sâu mảng Tài chính, Kho vận, Nhân sự</li>
                     </ul>
                 </div>
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-lg hover:border-purple-500 transition">
+                    <h4 class="text-xl font-black text-purple-600 mb-4 tracking-widest uppercase">2. Managed Services</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Dịch vụ bảo trì hệ thống, hỗ trợ kỹ thuật 24/7 onsite và remote, đảm bảo vận hành ổn định cho doanh nghiệp.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <img src="image_8e0563.jpg.png" 
+                     onerror="this.src='https://raw.githubusercontent.com/hoanglonggemini001-tech/Ngoc-Phuong-FPT/main/image_8e0563.jpg.png'" 
+                     class="rounded-[3rem] shadow-2xl w-full h-full object-cover" alt="Team FIS">
             </div>
         </div>
     </section>
@@ -71,8 +108,9 @@
         <a href="tel:0398431697" class="bg-orange-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition animate-bounce"><i class="fas fa-phone-alt text-3xl"></i></a>
     </div>
 
-    <footer class="bg-slate-900 py-12 text-center text-white">
-        <p class="text-slate-500 text-xs font-bold uppercase tracking-[0.2em]">© 2026 Designed for Ngoc-Phuong-FPT. Bản quyền hình ảnh thuộc về gia đình sếp!</p>
+    <footer class="bg-slate-900 py-16 text-center text-white border-t border-slate-800">
+        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] italic">Co-create the Next • FPT IS Representative</p>
+        <p class="mt-4 text-slate-600 text-[9px]">Dựa trên dữ liệu chính thức từ "VIE - Introduction FPT IS"</p>
     </footer>
 
 </body>
